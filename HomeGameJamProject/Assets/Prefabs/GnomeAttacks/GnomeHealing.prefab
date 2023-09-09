@@ -9,13 +9,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1161562043207432691}
-  - component: {fileID: 3094016138721557123}
+  - component: {fileID: -6886644074897425996}
+  - component: {fileID: -2246953676293105927}
   - component: {fileID: 8763245330527185011}
   - component: {fileID: 2901296459707348504}
-  - component: {fileID: 1414419686166404129}
+  - component: {fileID: -7171876775790559442}
   m_Layer: 0
-  m_Name: GnomeSlingshotAttack
-  m_TagString: GnomeAttack
+  m_Name: GnomeHealing
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,13 +30,13 @@ Transform:
   m_GameObject: {fileID: 3980320842927003469}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3094016138721557123
+--- !u!114 &-6886644074897425996
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -44,13 +45,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 3980320842927003469}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3ca852b612595849af00136917413de, type: 3}
+  m_Script: {fileID: 11500000, guid: 0d5fa713793cd8740af97aff4eadf126, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xSpeed: 0.05
-  ySpeed: 0.025
-  lifetime: 2
-  targetTag: Goblin
+  speed: 0.05
+  lifetime: 1
+--- !u!114 &-2246953676293105927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3980320842927003469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ee50825b7c815f40b09df82b59b4070, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &8763245330527185011
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -93,7 +104,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.107547104, g: 0.26372653, b: 1, a: 0.92156863}
+  m_Color: {r: 0.5223965, g: 1, b: 0.10588235, a: 0.28235295}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -129,7 +140,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!50 &1414419686166404129
+--- !u!50 &-7171876775790559442
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
