@@ -12,6 +12,7 @@ public class GnomeAttacks : MonoBehaviour
     public float attackDistance;
 
     bool attacking = false;
+    public bool constantlyMoveAndAttack;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +29,11 @@ public class GnomeAttacks : MonoBehaviour
         {
             Movement();
         }
+
+        if (constantlyMoveAndAttack)
+        {
+            Movement();
+        }
     }
 
     void Movement()
@@ -37,7 +43,7 @@ public class GnomeAttacks : MonoBehaviour
 
     IEnumerator Attacking()
     {
-        if (attacking)
+        if (attacking || constantlyMoveAndAttack)
         {
             Instantiate(meleeAttack, transform.position, Quaternion.identity); 
         }

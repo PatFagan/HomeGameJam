@@ -27,22 +27,6 @@ public class HomeManager : MonoBehaviour
         coinDisplay.text = "Coins: " + coins.ToString();
     }
 
-    void OnTriggerEnter2D(Collider2D collider)
-    {
-        if (collider.gameObject.tag == "Player")
-        {
-            homeBaseMenu.SetActive(true);
-        }
-    }
-
-    void OnTriggerExit2D(Collider2D collider)
-    {
-        if (collider.gameObject.tag == "Player")
-        {
-            homeBaseMenu.SetActive(false);
-        }
-    }
-
     public void SpawnGrunt()
     {
         int cost = 1;
@@ -50,6 +34,26 @@ public class HomeManager : MonoBehaviour
         {
             coins -= cost;
             Instantiate(gnomes[0], gnomeSpawn.position, Quaternion.identity);
+        }
+    }
+
+    public void SpawnScout()
+    {
+        int cost = 2;
+        if (coins >= cost)
+        {
+            coins -= cost;
+            Instantiate(gnomes[1], gnomeSpawn.position, Quaternion.identity);
+        }
+    }
+
+    public void SpawnHealer()
+    {
+        int cost = 4;
+        if (coins >= cost)
+        {
+            coins -= cost;
+            Instantiate(gnomes[2], gnomeSpawn.position, Quaternion.identity);
         }
     }
 }

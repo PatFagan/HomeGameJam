@@ -10,6 +10,9 @@ public class HealthManager : MonoBehaviour
     float maxHealth;
     public string damageTag;
 
+    public int coinsGranted;
+    bool dead = false;
+
     void Start()
     {
         // set maxHealth to default health amount
@@ -27,7 +30,7 @@ public class HealthManager : MonoBehaviour
         if (collider.gameObject.tag == damageTag)
         {
             print(gameObject.name);
-            
+
             health--;
 
             // destroy attack projectile
@@ -35,8 +38,14 @@ public class HealthManager : MonoBehaviour
 
             if (health <= 0)
             {
-                // add some death effect here
-                Destroy(gameObject);
+                if (!dead)
+                {
+                    print("gain" + coinsGranted + "coins");
+                    GameObject.Find("HomeBase").GetComponent<HomeManager>().coins += coinsGranted;
+                    // add some death effect here
+                    Destroy(gameObject);
+                }
+                dead = true;
             }
         }
     }
