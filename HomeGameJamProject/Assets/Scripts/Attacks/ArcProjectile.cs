@@ -15,7 +15,7 @@ public class ArcProjectile : MonoBehaviour
     void Start()
     {
         Destroy(gameObject, lifetime);
-        
+
         enemy = GameObject.FindGameObjectWithTag(targetTag);
 
         currentDist = Mathf.Abs(transform.position.x - enemy.transform.position.x);
@@ -24,7 +24,11 @@ public class ArcProjectile : MonoBehaviour
 
     void FixedUpdate()
     {
-        currentDist = Mathf.Abs(transform.position.x - enemy.transform.position.x);
+        if (enemy)
+        {
+            currentDist = Mathf.Abs(transform.position.x - enemy.transform.position.x);
+        }
+        
         floatTimer -= Time.deltaTime;
 
         if (currentDist > midDist)
