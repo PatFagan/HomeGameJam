@@ -10,9 +10,11 @@ public class MoveAgainstCursor : MonoBehaviour
 
     public float moveScalar;
 
+    public float yShift;
+
     void Start()
     {
-        defaultPos = new Vector2(transform.position.x, transform.position.z);
+        defaultPos = new Vector2(transform.position.x, transform.position.y);
     }
 
     void Update()
@@ -22,7 +24,7 @@ public class MoveAgainstCursor : MonoBehaviour
         // Vector2 worldPosition = Camera.main.ScreenToWorldPoint(screenPosition);
 
         // shift to account for weird askewness
-        screenPosition.y -= 10000f * (moveScalar / 20f);
+        screenPosition.y -= yShift * (moveScalar / 20f);
 
         // get distance between mouse and object
         Vector2 thisPos = new Vector2(transform.position.x, transform.position.z);
