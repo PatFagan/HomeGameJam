@@ -10,8 +10,9 @@ public class HomeHealthManager : MonoBehaviour
     float maxHealth;
     public string damageTag;
 
-    public int coinsGranted;
     bool dead = false;
+
+    public GameObject evictionMenu;
 
     void Start()
     {
@@ -40,10 +41,8 @@ public class HomeHealthManager : MonoBehaviour
             {
                 if (!dead)
                 {
-                    print("gain" + coinsGranted + "coins");
-                    GameObject.Find("HomeBase").GetComponent<HomeManager>().coins += coinsGranted;
                     // open fail menu
-                    print("evicted");
+                    evictionMenu.SetActive(true);
                 }
                 dead = true;
             }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class HomeManager : MonoBehaviour
 {
@@ -25,6 +26,11 @@ public class HomeManager : MonoBehaviour
     void Update()
     {
         coinDisplay.text = "Coins: " + coins.ToString();
+
+        if (Input.GetButtonDown("Escape"))
+        {
+            Application.Quit();
+        }
     }
 
     public void SpawnGrunt()
@@ -55,5 +61,10 @@ public class HomeManager : MonoBehaviour
             coins -= cost;
             Instantiate(gnomes[2], gnomeSpawn.position, Quaternion.identity);
         }
+    }
+
+    public void Retry()
+    {
+        SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
     }
 }

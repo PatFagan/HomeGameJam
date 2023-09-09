@@ -11,12 +11,14 @@ public class ArcProjectile : MonoBehaviour
     float currentDist, midDist;
 
     GameObject enemy;
+    float savedEnemyX;
 
     void Start()
     {
         Destroy(gameObject, lifetime);
 
         enemy = GameObject.FindGameObjectWithTag(targetTag);
+        savedEnemyX = enemy.transform.position.x;
 
         currentDist = Mathf.Abs(transform.position.x - enemy.transform.position.x);
         midDist = currentDist / 2;
@@ -26,14 +28,14 @@ public class ArcProjectile : MonoBehaviour
     {
         if (enemy)
         {
-            currentDist = Mathf.Abs(transform.position.x - enemy.transform.position.x);
+            currentDist = Mathf.Abs(transform.position.x - savedEnemyX);
         }
-        
+
         floatTimer -= Time.deltaTime;
 
         if (currentDist > midDist)
-            transform.Translate(new Vector3(xSpeed, ySpeed, 0f));
+            transform.Translate(new Vector3(xSpeed, currentDist*ySpeed, 0f));
         else if (currentDist <= midDist)
-            transform.Translate(new Vector3(xSpeed, -ySpeed, 0f));
+            transform.Translate(new Vector3(xSpeed, currentDist*-ySpeed, 0f));
     }
 }
