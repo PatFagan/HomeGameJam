@@ -48,8 +48,12 @@ public class GoblinAttacks : MonoBehaviour
 
     void AttackCheck()
     {
+        int layerMask = 1 << 8;
+
         Vector3 rayCastStart = new Vector3(transform.position.x - .5f, transform.position.y, 0f);
-        bool nearEnemy = Physics2D.Raycast(rayCastStart, Vector3.left, attackDistance + .75f);
+        bool nearEnemy = Physics2D.Raycast(rayCastStart, Vector3.left, attackDistance + .75f, layerMask);
+        // buffer between units
+        nearEnemy = Physics2D.Raycast(rayCastStart, Vector3.left, 1f);
         
         if (nearEnemy)
         {
