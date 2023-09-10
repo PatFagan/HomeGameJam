@@ -13,7 +13,7 @@ public class StraightProjectile : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         transform.position += new Vector3(speed, 0f, 0f);
     }
