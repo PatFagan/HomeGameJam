@@ -36,11 +36,15 @@ public class HealthManager : MonoBehaviour
     {
         if (collider.gameObject.tag == damageTag)
         {
-            print(gameObject.name);
-
+            // flash
             float damage = collider.gameObject.GetComponent<Damage>().damage;
             health -= damage;
             StartCoroutine(Flash());
+            
+            // hit number
+            GameObject newHit = hitNumber;
+            newHit.transform.GetChild(0).GetComponent<TMP_Text>().text = "-" + damage.ToString();
+            Instantiate(hitNumber, transform.position, Quaternion.identity);
 
             // destroy attack projectile
             Destroy(collider.gameObject);
@@ -52,9 +56,6 @@ public class HealthManager : MonoBehaviour
                     print("gain" + coinsGranted + "coins");
                     GameObject.Find("HomeBase").GetComponent<HomeManager>().coins += coinsGranted;
                     // add some death effect here
-                    GameObject newHit = hitNumber;
-                    newHit.transform.GetChild(0).GetComponent<TMP_Text>().text = "-" + damage.ToString();
-                    Instantiate(hitNumber, transform.position, Quaternion.identity);
                     Destroy(gameObject);
                 }
                 dead = true;

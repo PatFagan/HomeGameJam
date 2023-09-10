@@ -61,7 +61,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3ca852b612595849af00136917413de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xSpeed: 0.05
+  xSpeed: 0.1
   ySpeed: 0.005
   lifetime: 4
   targetTag: Goblin
