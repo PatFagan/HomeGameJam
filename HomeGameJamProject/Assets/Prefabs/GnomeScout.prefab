@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 7482667652216324306, guid: cc5a824412aa16d42b465b6909397938, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ed58be82fca7d5a4f853e508029d3067, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -211,6 +211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0.005
+  width: 0.75
   meleeAttack: {fileID: 3980320842927003469, guid: 4355f672c10f0f74baea879bbf08a3e8, type: 3}
   attackDistance: 5
   constantlyMoveAndAttack: 0

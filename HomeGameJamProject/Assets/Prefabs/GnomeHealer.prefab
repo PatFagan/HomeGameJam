@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: 7203253778709978534}
   m_Layer: 0
   m_Name: GnomeHealer
-  m_TagString: Goblin
+  m_TagString: Gnome
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -135,6 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0.002
+  width: 0.75
   meleeAttack: {fileID: 3980320842927003469, guid: eb7c27d8b319e99458b148fe90df85cc, type: 3}
   attackDistance: 0
   constantlyMoveAndAttack: 1
