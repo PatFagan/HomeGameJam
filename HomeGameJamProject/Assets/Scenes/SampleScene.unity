@@ -2048,7 +2048,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.5471698, g: 0.42788124, b: 0.33243147, a: 1}
+  m_Color: {r: 0.003921569, g: 0.0627451, b: 0.011764707, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5051,6 +5051,8 @@ MonoBehaviour:
   coinsGranted: 0
   flashMat: {fileID: 2100000, guid: fe4356f49e9a42648b60ce86f1e3da8a, type: 2}
   hitNumber: {fileID: 4082860394459818591, guid: 7568d467dcc51af4caaf654efebcaf66, type: 3}
+  death: {fileID: 0}
+  deathParticle: {fileID: 0}
 --- !u!1 &1078153529
 GameObject:
   m_ObjectHideFlags: 0
