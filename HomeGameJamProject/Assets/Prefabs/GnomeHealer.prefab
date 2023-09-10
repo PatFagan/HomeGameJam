@@ -154,6 +154,8 @@ MonoBehaviour:
   health: 7
   damageTag: GoblinAttack
   coinsGranted: 0
+  flashMat: {fileID: 2100000, guid: fe4356f49e9a42648b60ce86f1e3da8a, type: 2}
+  hitNumber: {fileID: 4082860394459818591, guid: 7568d467dcc51af4caaf654efebcaf66, type: 3}
 --- !u!212 &807738209337031122
 SpriteRenderer:
   m_ObjectHideFlags: 0
