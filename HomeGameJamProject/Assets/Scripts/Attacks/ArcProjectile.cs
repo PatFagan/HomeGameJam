@@ -18,15 +18,26 @@ public class ArcProjectile : MonoBehaviour
         Destroy(gameObject, lifetime);
 
         enemy = GameObject.FindGameObjectWithTag(targetTag);
-        savedEnemyX = enemy.transform.position.x;
-
-        currentDist = Mathf.Abs(transform.position.x - enemy.transform.position.x);
+        
+        if (enemy)
+        {
+            savedEnemyX = enemy.transform.position.x;
+            currentDist = Mathf.Abs(transform.position.x - enemy.transform.position.x);
+        }
+        else
+        {
+            currentDist = 1f;
+        }
+        
         midDist = currentDist / 2;
     }
 
     void FixedUpdate()
     {
-        currentDist = Mathf.Abs(transform.position.x - savedEnemyX);
+        if (enemy)
+            currentDist = Mathf.Abs(transform.position.x - savedEnemyX);
+        else
+            currentDist -= .0001f;
 
         floatTimer -= Time.deltaTime;
 
