@@ -444,7 +444,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -281.9173, y: 178}
+  m_AnchoredPosition: {x: -281.92, y: 170.70001}
   m_SizeDelta: {x: 178.1654, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &181794442
@@ -793,17 +793,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: 'Hut Health - '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: edc3ecb0951b52542b17062a44f5a17d, type: 2}
+  m_sharedMaterial: {fileID: 5291820064215647934, guid: edc3ecb0951b52542b17062a44f5a17d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4279637526
+  m_fontColor: {r: 0.08627451, g: 0.08627451, b: 0.08627451, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1361,8 +1361,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 580495463}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
+        m_TargetAssemblyTypeName: ShopMenu, Assembly-CSharp
+        m_MethodName: Button
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1931,6 +1931,8 @@ MonoBehaviour:
   health: 20
   damageTag: GoblinAttack
   coinsGranted: 0
+  flashMat: {fileID: 2100000, guid: fe4356f49e9a42648b60ce86f1e3da8a, type: 2}
+  hitNumber: {fileID: 4082860394459818591, guid: 7568d467dcc51af4caaf654efebcaf66, type: 3}
 --- !u!1 &1085494587
 GameObject:
   m_ObjectHideFlags: 0
@@ -2217,7 +2219,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1193020247
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2236,8 +2238,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -71, y: 73.00001}
-  m_SizeDelta: {x: 200, y: 250}
+  m_AnchoredPosition: {x: -71, y: 73.002}
+  m_SizeDelta: {x: 200, y: 215.61}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1193020248
 MonoBehaviour:
@@ -2312,7 +2314,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -271, y: 148}
+  m_AnchoredPosition: {x: -271, y: 140.7}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1558069809
@@ -2569,8 +2571,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -282, y: 73.00001}
-  m_SizeDelta: {x: 200, y: 250}
+  m_AnchoredPosition: {x: -281.92, y: 73}
+  m_SizeDelta: {x: 200, y: 215.61}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1782733213
 MonoBehaviour:

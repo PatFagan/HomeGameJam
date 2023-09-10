@@ -12,9 +12,10 @@ public class ShopMenu : MonoBehaviour
         UpgradeMenu.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
+
+    public void Button()
     {
+        isActive = !isActive;
         UpgradeMenu.SetActive(isActive);
     }
 }

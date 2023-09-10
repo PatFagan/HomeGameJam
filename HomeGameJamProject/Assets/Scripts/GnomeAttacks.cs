@@ -55,12 +55,13 @@ public class GnomeAttacks : MonoBehaviour
     void AttackCheck()
     {
         int layerMask = 1 << 7;
-        //layerMask = ~layerMask;
         
         Vector3 rayCastStart = new Vector3(transform.position.x + .5f, transform.position.y, 0f);
         bool nearEnemy = Physics2D.Raycast(rayCastStart, Vector3.right, attackDistance + .75f, layerMask);
-        
-        if (nearEnemy)
+        // buffer between units
+        bool buffer = Physics2D.Raycast(rayCastStart, Vector3.right, 1f);
+
+        if (nearEnemy || buffer)
         {
             attacking = true;
         }
