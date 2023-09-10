@@ -6,17 +6,24 @@ public class GnomeAttacks : MonoBehaviour
 {
     // movement variables
     public float moveSpeed;
+    float negMoveSpeed;
+
+    // raycast start variables
+    public float width;
 
     // attack variables
     public GameObject meleeAttack;
     public float attackDistance;
 
     bool attacking = false;
+    bool moving = true;
     public bool constantlyMoveAndAttack;
 
     // Start is called before the first frame update
     void Start()
-    {
+    {   
+        negMoveSpeed = -moveSpeed/3;
+
         StartCoroutine(Attacking());
     }
 
@@ -25,7 +32,7 @@ public class GnomeAttacks : MonoBehaviour
     {
         AttackCheck();
 
-        if (!attacking)
+        if (moving && !attacking)
         {
             Movement();
         }
@@ -56,17 +63,34 @@ public class GnomeAttacks : MonoBehaviour
     {
         int layerMask = 1 << 7;
         
-        Vector3 rayCastStart = new Vector3(transform.position.x + .5f, transform.position.y, 0f);
+        Vector3 rayCastStart = new Vector3(transform.position.x + width, transform.position.y, 0f);
         bool nearEnemy = Physics2D.Raycast(rayCastStart, Vector3.right, attackDistance + .75f, layerMask);
         // buffer between units
         bool buffer = Physics2D.Raycast(rayCastStart, Vector3.right, 1f);
 
-        if (nearEnemy || buffer)
+        bool noEnemy = Physics2D.Raycast(rayCastStart, Vector3.right, 200f, layerMask);
+        
+        if (!noEnemy)
+        {
+            moveSpeed = negMoveSpeed;
+        }
+        else if (noEnemy)
+        {
+            moveSpeed = Mathf.Abs(moveSpeed);
+        }
+
+        if (buffer)
+        {
+            moving = false;
+        }
+
+        if (nearEnemy)
         {
             attacking = true;
         }
         else if (!nearEnemy)
         {
+            moving = true;
             attacking = false;
         }
     }

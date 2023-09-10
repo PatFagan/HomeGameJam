@@ -7,18 +7,54 @@ using TMPro;
 public class Spawner : MonoBehaviour
 {
     public GameObject[] spawnedObjects;
-    public float spawnDelay;
+    float spawnDelay = 5;
+
+    int tick = 0;
+    int maxEnemySpawn = 1;
 
     void Start()
     {
         StartCoroutine(Spawning());
     }
 
+    void IncreaseDifficulty()
+    {
+        switch(tick) 
+        {
+        case 1:
+            maxEnemySpawn = 3;
+            break;
+        case 5:
+            spawnDelay = 4;
+            break;
+        case 10:
+            maxEnemySpawn = 5;
+            break;
+        case 15:
+            spawnDelay = 3;
+            break;
+        case 20:
+            spawnDelay = 2;
+            break;
+        case 30:
+            maxEnemySpawn = spawnedObjects.Length;
+            break;
+        default:
+            // code block
+            break;
+        }
+    }
+
     IEnumerator Spawning()
     {
-        int index = Random.Range(0, spawnedObjects.Length);
+        int index = Random.Range(0, maxEnemySpawn);
+        print(maxEnemySpawn);
         GameObject enemy = Instantiate(spawnedObjects[index], transform.position, transform.rotation);
         yield return new WaitForSeconds(spawnDelay);
+
+        tick++;
+        IncreaseDifficulty();
+
         StartCoroutine(Spawning());
     }
 }
