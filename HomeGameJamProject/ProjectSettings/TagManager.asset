@@ -45,3 +45,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 2964779629
+    locked: 0
+  - name: FarTrees
+    uniqueID: 3842283725
+    locked: 0
+  - name: MedTrees
+    uniqueID: 2052852449
+    locked: 0
+  - name: CloseTrees
+    uniqueID: 4010431215
+    locked: 0
+  - name: Game
+    uniqueID: 2155373309
+    locked: 0
+  - name: Ground
+    uniqueID: 3399425671
+    locked: 0
