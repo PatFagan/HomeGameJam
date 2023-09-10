@@ -62,7 +62,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xSpeed: -0.1
-  ySpeed: 0.005
+  ySpeed: 0.01
   lifetime: 4
   targetTag: Gnome
 --- !u!212 &8763245330527185011
