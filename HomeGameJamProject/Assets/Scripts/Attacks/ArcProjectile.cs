@@ -26,16 +26,13 @@ public class ArcProjectile : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (enemy)
-        {
-            currentDist = Mathf.Abs(transform.position.x - savedEnemyX);
-        }
+        currentDist = Mathf.Abs(transform.position.x - savedEnemyX);
 
         floatTimer -= Time.deltaTime;
 
         if (currentDist > midDist)
-            transform.Translate(new Vector3(xSpeed, currentDist*ySpeed, 0f));
+            transform.Translate(new Vector3(xSpeed, Mathf.Abs(currentDist - midDist)*ySpeed, 0f));
         else if (currentDist <= midDist)
-            transform.Translate(new Vector3(xSpeed, currentDist*-ySpeed, 0f));
+            transform.Translate(new Vector3(xSpeed, Mathf.Abs(currentDist - midDist)*-ySpeed, 0f));
     }
 }
