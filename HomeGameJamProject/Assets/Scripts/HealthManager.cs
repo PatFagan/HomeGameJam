@@ -19,6 +19,9 @@ public class HealthManager : MonoBehaviour
 
     public GameObject hitNumber;
 
+    public AudioSource death;
+
+    public ParticleSystem deathParticle;
     void Start()
     {
         // set maxHealth to default health amount
@@ -59,6 +62,8 @@ public class HealthManager : MonoBehaviour
                     Destroy(gameObject);
                 }
                 dead = true;
+                death.Play();
+                deathParticle.Play();
             }
         }
     }
