@@ -16,6 +16,8 @@ public class HomeManager : MonoBehaviour
     public int coins;
     public TMP_Text coinDisplay;
 
+    bool spawnCoolingDown = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,35 +38,45 @@ public class HomeManager : MonoBehaviour
     public void SpawnGrunt()
     {
         int cost = 1;
-        if (coins >= cost)
+        if (coins >= cost && spawnCoolingDown == false)
         {
             coins -= cost;
             Instantiate(gnomes[0], gnomeSpawn.position, Quaternion.identity);
+            StartCoroutine(Cooldown());
         }
     }
 
     public void SpawnScout()
     {
         int cost = 2;
-        if (coins >= cost)
+        if (coins >= cost && spawnCoolingDown == false)
         {
             coins -= cost;
             Instantiate(gnomes[1], gnomeSpawn.position, Quaternion.identity);
+            StartCoroutine(Cooldown());
         }
     }
 
     public void SpawnHealer()
     {
         int cost = 4;
-        if (coins >= cost)
+        if (coins >= cost && spawnCoolingDown == false)
         {
             coins -= cost;
             Instantiate(gnomes[2], gnomeSpawn.position, Quaternion.identity);
+            StartCoroutine(Cooldown());
         }
     }
 
     public void Retry()
     {
         SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
+    }
+
+    IEnumerator Cooldown()
+    {
+        spawnCoolingDown = true;
+        yield return new WaitForSeconds(1f);
+        spawnCoolingDown = false;
     }
 }

@@ -19,6 +19,6 @@ public class CameraControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        cam.transform.position = new Vector3(slider.value, 0, -10);
+        cam.transform.position = new Vector3(slider.value, -2, -10);
     }
 }
