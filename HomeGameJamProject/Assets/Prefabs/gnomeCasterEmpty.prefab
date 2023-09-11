@@ -242,7 +242,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9583e4a721e746d4a8f147d603c71448, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c6bd530209aae3b44adcce12a0e227c5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -285,7 +285,7 @@ GameObject:
   - component: {fileID: 6222247878576148232}
   - component: {fileID: 2791063980403922587}
   m_Layer: 0
-  m_Name: gnomeEmpty
+  m_Name: gnomeCasterEmpty
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
