@@ -17,7 +17,7 @@ public class HomeHealthManager : MonoBehaviour
     void Start()
     {
         // set maxHealth to default health amount
-        maxHealth = health;
+        //maxHealth = health*2f;
     }
 
     void Update()
@@ -30,8 +30,6 @@ public class HomeHealthManager : MonoBehaviour
     {
         if (collider.gameObject.tag == damageTag)
         {
-            print(gameObject.name);
-
             health--;
 
             // destroy attack projectile

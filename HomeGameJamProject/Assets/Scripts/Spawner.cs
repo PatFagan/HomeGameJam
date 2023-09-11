@@ -21,22 +21,22 @@ public class Spawner : MonoBehaviour
     {
         switch(tick) 
         {
-        case 1:
+        case 10:
             maxEnemySpawn = 3;
             break;
-        case 5:
+        case 15:
             spawnDelay = 2.5f;
             break;
-        case 10:
+        case 20:
             maxEnemySpawn = 5;
             break;
-        case 15:
+        case 25:
             spawnDelay = 2;
             break;
-        case 20:
+        case 30:
             spawnDelay = 1.5f;
             break;
-        case 30:
+        case 35:
             maxEnemySpawn = spawnedObjects.Length;
             break;
         default:
