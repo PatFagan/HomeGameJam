@@ -33,7 +33,7 @@ public class GnomeAttacks : MonoBehaviour
     {
         AttackCheck();
 
-        if (moving && !attacking)
+        if (moving)
         {
             Movement();
         }
@@ -65,11 +65,12 @@ public class GnomeAttacks : MonoBehaviour
     void AttackCheck()
     {
         int layerMask = 1 << 7;
+        layerMask = ~layerMask;
         
         Vector3 rayCastStart = new Vector3(transform.position.x + width, transform.position.y, 0f);
         bool nearEnemy = Physics2D.Raycast(rayCastStart, Vector3.right, attackDistance + .75f, layerMask);
         // buffer between units
-        bool buffer = Physics2D.Raycast(rayCastStart, Vector3.right, 1f);
+        // bool buffer = Physics2D.Raycast(rayCastStart, Vector3.right, .5f);
 
         bool noEnemy = Physics2D.Raycast(rayCastStart, Vector3.right, 500f, layerMask);
         
@@ -82,14 +83,10 @@ public class GnomeAttacks : MonoBehaviour
             moveSpeed = Mathf.Abs(moveSpeed);
         }
 
-        if (buffer)
-        {
-            moving = false;
-        }
-
         if (nearEnemy)
         {
             attacking = true;
+            moving = false;
         }
         else if (!nearEnemy)
         {

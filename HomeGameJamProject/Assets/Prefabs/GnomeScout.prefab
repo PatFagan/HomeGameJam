@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2124797549232656485}
   - component: {fileID: 3282665768661958941}
   - component: {fileID: 3065089912777572101}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 3557466675513941196}
   - component: {fileID: 8410379486334736302}
   - component: {fileID: 8410379486334736300}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GnomeScout
   m_TagString: Gnome
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8410379486334736303}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.37, y: -4.08, z: 0}
+  m_LocalPosition: {x: 0, y: -4.08, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -128,9 +128,8 @@ MonoBehaviour:
   moveSpeed: 0.01
   width: 0.75
   meleeAttack: {fileID: 3980320842927003469, guid: 4355f672c10f0f74baea879bbf08a3e8, type: 3}
-  attackDistance: 5
+  attackDistance: 0.003
   timeBetweenAttacks: 1
-  attackScalar: 1
   constantlyMoveAndAttack: 0
 --- !u!114 &3557466675513941196
 MonoBehaviour:
@@ -147,6 +146,7 @@ MonoBehaviour:
   healthBar: {fileID: 3065089912777572101}
   staticHealth: 4
   health: 4
+  maxHealth: 0
   damageTag: GoblinAttack
   coinsGranted: 0
   flashMat: {fileID: 2100000, guid: fe4356f49e9a42648b60ce86f1e3da8a, type: 2}
@@ -243,7 +243,7 @@ GameObject:
   - component: {fileID: 6019904971652371111}
   - component: {fileID: 8262325120621557012}
   - component: {fileID: 7862378965525534893}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}

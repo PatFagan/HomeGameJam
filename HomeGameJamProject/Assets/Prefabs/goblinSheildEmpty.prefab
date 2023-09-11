@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3420155680559418025}
   - component: {fileID: 3420155680559418024}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GoblinFoot (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2139593987
-  m_SortingLayer: 5
+  m_SortingLayer: -2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c126dde01712a4a478ef842267ea12c0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -95,7 +95,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3420155681100716523}
   - component: {fileID: 3420155681100716522}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GoblinFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,7 +157,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2139593987
-  m_SortingLayer: 5
+  m_SortingLayer: -2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c126dde01712a4a478ef842267ea12c0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -180,7 +180,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3420155681348732058}
   - component: {fileID: 3420155681348732053}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Goblin_Spear_Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -241,7 +241,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2139593987
-  m_SortingLayer: 5
+  m_SortingLayer: -2
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 489222c96fe137a4381bda1f54a0b5a3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -264,7 +264,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3420155681492483579}
   - component: {fileID: 4889479986575692998}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: goblinSheildEmpty
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -279,7 +279,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3420155681492483576}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.98649, y: -1.7484508, z: -12.329846}
+  m_LocalPosition: {x: 0, y: -1.7484508, z: -12.329846}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -322,7 +322,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3420155681854742024}
   - component: {fileID: 3420155681854742027}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Leg_Stub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -383,7 +383,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2139593987
-  m_SortingLayer: 5
+  m_SortingLayer: -2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b9276ebabfc3b714887202a0e777132b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -406,7 +406,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3420155682181004955}
   - component: {fileID: 3420155682181004954}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Goblin_Right_Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -467,7 +467,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2139593987
-  m_SortingLayer: 5
+  m_SortingLayer: -2
   m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: 26e7f70bc7840854c9dfb5e65fa98261, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -490,7 +490,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3420155682257524668}
   - component: {fileID: 3420155682257524671}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Leg_Stub (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -551,7 +551,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2139593987
-  m_SortingLayer: 5
+  m_SortingLayer: -2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b9276ebabfc3b714887202a0e777132b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -574,7 +574,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3420155682687495706}
   - component: {fileID: 3420155682687495701}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Goblin_Melee_Unit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -635,7 +635,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2139593987
-  m_SortingLayer: 5
+  m_SortingLayer: -2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 1a9b04f156d6c174a87890dc0b786238, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

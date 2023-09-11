@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8763245330527185011}
   - component: {fileID: 2901296459707348504}
   - component: {fileID: -7171876775790559442}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GnomeHealing
   m_TagString: Untagged
   m_Icon: {fileID: 0}

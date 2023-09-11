@@ -29,7 +29,7 @@ public class GoblinAttacks : MonoBehaviour
     {
         AttackCheck();
 
-        if (moving && !attacking)
+        if (moving)
         {
             Movement();
         }
@@ -54,25 +54,31 @@ public class GoblinAttacks : MonoBehaviour
     void AttackCheck()
     {
         int layerMask = 1 << 8;
+        layerMask = ~layerMask;
 
         Vector3 rayCastStart = new Vector3(transform.position.x - width, transform.position.y, 0f);
         bool nearEnemy = Physics2D.Raycast(rayCastStart, Vector3.left, attackDistance + .75f, layerMask);
         // buffer between units
-        bool buffer = Physics2D.Raycast(rayCastStart, Vector3.left, 1f);
+        bool buffer = Physics2D.Raycast(rayCastStart, Vector3.left, .5f);
         
         if (buffer)
         {
             moving = false;
+            attacking = false; 
         }
-
-        if (nearEnemy || buffer)
+        else if (!buffer)
         {
-            attacking = true;
+            if (nearEnemy || buffer)
+            {
+                attacking = true;
+                moving = false;
+            }
+            else if (!nearEnemy)
+            {
+                moving = true;
+                attacking = false;
+            }
         }
-        else if (!nearEnemy)
-        {
-            moving = true;
-            attacking = false;
-        }
+        
     }
 }

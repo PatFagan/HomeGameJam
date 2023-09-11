@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6925647570290566557}
   - component: {fileID: 3121894531508469482}
   - component: {fileID: 3958564882593195268}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 6007431342973567410}
   - component: {fileID: 5610144173249346363}
   - component: {fileID: 9209429781984270477}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -191,7 +191,7 @@ GameObject:
   - component: {fileID: 8594667598422747730}
   - component: {fileID: 8594667598422747728}
   - component: {fileID: 3994323228936162243}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: GoblinGrunt
   m_TagString: Goblin
   m_Icon: {fileID: 0}
@@ -206,7 +206,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8594667598422747731}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.41, y: -7, z: 0}
+  m_LocalPosition: {x: 0, y: -7, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
