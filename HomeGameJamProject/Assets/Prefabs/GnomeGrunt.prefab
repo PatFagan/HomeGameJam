@@ -259,6 +259,8 @@ MonoBehaviour:
   width: 0.75
   meleeAttack: {fileID: 3980320842927003469, guid: 4ebed889fc9dc4e48bf85aa05d6952ec, type: 3}
   attackDistance: 0.0005
+  timeBetweenAttacks: 1
+  attackScalar: 1
   constantlyMoveAndAttack: 0
   anim: {fileID: 4026989304766555384}
 --- !u!114 &3557466675513941196
@@ -274,6 +276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 3065089912777572101}
+  staticHealth: 5
   health: 5
   damageTag: GoblinAttack
   coinsGranted: 0

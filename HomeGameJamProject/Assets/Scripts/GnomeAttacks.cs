@@ -14,12 +14,12 @@ public class GnomeAttacks : MonoBehaviour
     // attack variables
     public GameObject meleeAttack;
     public float attackDistance;
+    public float timeBetweenAttacks;
+    public float attackScalar = 1f;
 
     bool attacking = false;
     bool moving = true;
     public bool constantlyMoveAndAttack;
-
-    public Animator anim;
 
     // Start is called before the first frame update
     void Start()
@@ -54,11 +54,13 @@ public class GnomeAttacks : MonoBehaviour
     {
         if (attacking || constantlyMoveAndAttack)
         {
-            Instantiate(meleeAttack, transform.position, Quaternion.identity);
-            anim.Play("attack");
+            GameObject newAttack = meleeAttack;
+            newAttack.GetComponent<Damage>().damage *= attackScalar;
+
+            Instantiate(newAttack, transform.position, Quaternion.identity); 
         }
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(timeBetweenAttacks);
         StartCoroutine(Attacking());
     }
 

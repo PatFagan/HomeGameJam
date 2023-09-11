@@ -102,7 +102,7 @@ Transform:
   m_GameObject: {fileID: 8410379486164588049}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.92, z: 0}
-  m_LocalScale: {x: 1.25, y: 1.5, z: 1}
+  m_LocalScale: {x: 2, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8410379486334736301}
@@ -173,9 +173,8 @@ GameObject:
   - component: {fileID: 3557466675513941196}
   - component: {fileID: 8410379486334736302}
   - component: {fileID: 8410379486334736300}
-  - component: {fileID: 8410379486334736298}
   m_Layer: 0
-  m_Name: GnomeSlingshot
+  m_Name: GnomeMage
   m_TagString: Gnome
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -189,8 +188,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8410379486334736303}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.37, y: -4.08, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalPosition: {x: -1.37, y: -2, z: 0}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8410379486164588048}
@@ -212,8 +211,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 0.01
   width: 0.75
-  meleeAttack: {fileID: 3980320842927003469, guid: 4355f672c10f0f74baea879bbf08a3e8, type: 3}
-  attackDistance: 3
+  meleeAttack: {fileID: 3980320842927003469, guid: 466bb9c0bf4d3204aa354a875eddd5fd, type: 3}
+  attackDistance: 7
+  timeBetweenAttacks: 4
+  attackScalar: 1
   constantlyMoveAndAttack: 0
 --- !u!114 &3557466675513941196
 MonoBehaviour:
@@ -228,11 +229,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 3065089912777572101}
-  health: 2
+  staticHealth: 5
+  health: 5
   damageTag: GoblinAttack
   coinsGranted: 0
-  flashMat: {fileID: 0}
-  hitNumber: {fileID: 0}
+  flashMat: {fileID: 2100000, guid: fe4356f49e9a42648b60ce86f1e3da8a, type: 2}
+  hitNumber: {fileID: 4082860394459818591, guid: 7568d467dcc51af4caaf654efebcaf66, type: 3}
+  death: {fileID: 0}
+  deathParticle: {fileID: 0}
 --- !u!212 &8410379486334736302
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -298,7 +302,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -1.5}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -309,29 +313,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 1, y: 5.52}
   m_EdgeRadius: 0
---- !u!50 &8410379486334736298
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8410379486334736303}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1 &8686531422032297087
 GameObject:
   m_ObjectHideFlags: 0

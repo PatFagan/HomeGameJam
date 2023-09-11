@@ -13,6 +13,7 @@ public class GoblinAttacks : MonoBehaviour
     // attack variables
     public GameObject meleeAttack;
     public float attackDistance;
+    public float timeBetweenAttacks;
 
     bool attacking = false;
 
@@ -45,7 +46,7 @@ public class GoblinAttacks : MonoBehaviour
             Instantiate(meleeAttack, transform.position, Quaternion.identity); 
         }
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(timeBetweenAttacks);
         StartCoroutine(Attacking());
     }
 
