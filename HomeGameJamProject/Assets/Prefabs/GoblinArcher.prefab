@@ -310,7 +310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e967a8965879954987c248e4a36f143, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: -0.006
+  moveSpeed: -0.01
   width: 0.75
   meleeAttack: {fileID: 3980320842927003469, guid: dfdffcce2901b2543ae3664860f67811, type: 3}
   attackDistance: 3
