@@ -243,7 +243,7 @@ SpriteRenderer:
   m_SortingLayerID: -2139593987
   m_SortingLayer: 5
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: b5561ca5e8b80574392947b56d530b98, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 96c2053ce57bd7947a6b8fce2b4f12e8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -265,7 +265,7 @@ GameObject:
   - component: {fileID: 3420155681492483579}
   - component: {fileID: 4889479986575692998}
   m_Layer: 0
-  m_Name: goblinEmpty
+  m_Name: goblinThrowEmpty
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -280,7 +280,7 @@ Transform:
   m_GameObject: {fileID: 3420155681492483576}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.98649, y: -1.7484508, z: -12.329846}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3420155682687495706}

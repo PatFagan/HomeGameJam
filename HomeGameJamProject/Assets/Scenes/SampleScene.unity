@@ -2567,7 +2567,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.4669811, g: 0.5381783, b: 1, a: 0}
+  m_BackGroundColor: {r: 0.5424528, g: 0.8543133, b: 1, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -5541,6 +5541,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 181794442}
+  staticHealth: 0
   health: 20
   damageTag: GoblinAttack
   coinsGranted: 0
@@ -5593,6 +5594,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 181794442}
   health: 20
+  maxHealth: 0
   damageTag: GoblinAttack
   evictionMenu: {fileID: 1250301212}
 --- !u!1 &1078153529

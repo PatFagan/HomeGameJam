@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: -2139593987
   m_SortingLayer: 5
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: bb5507c0c748a984b8ed0d89368d36ff, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5c1b693667cbc3b4985fb6f37ac1d2fd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -157,7 +157,7 @@ SpriteRenderer:
   m_SortingLayerID: -2139593987
   m_SortingLayer: 5
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: ec8d4335e3654b044bf168a27002727a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bfb0d3ec4ce63df45a3d4b65f99e7d40, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -242,7 +242,7 @@ SpriteRenderer:
   m_SortingLayerID: -2139593987
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c6bd530209aae3b44adcce12a0e227c5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 44a1ce5d688fdd841a702231e0bbee77, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -285,7 +285,7 @@ GameObject:
   - component: {fileID: 6222247878576148232}
   - component: {fileID: 2791063980403922587}
   m_Layer: 0
-  m_Name: gnomeCasterEmpty
+  m_Name: gnomeScoutEmpty
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
