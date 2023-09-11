@@ -1554,7 +1554,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 328483846}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 55.8, y: -3.58, z: 0}
+  m_LocalPosition: {x: 6.7, y: -3.58, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5576,7 +5576,6 @@ GameObject:
   - component: {fileID: 1033317500}
   - component: {fileID: 1033317503}
   - component: {fileID: 1033317506}
-  - component: {fileID: 1033317504}
   - component: {fileID: 1033317502}
   - component: {fileID: 1033317505}
   m_Layer: 8
@@ -5675,27 +5674,6 @@ MonoBehaviour:
   gnomeSpawn: {fileID: 324022739}
   coins: 10
   coinDisplay: {fileID: 1558069809}
---- !u!114 &1033317504
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1033317499}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f8e33710134b2c46839f3bf5b4ce029, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthBar: {fileID: 181794442}
-  staticHealth: 0
-  health: 20
-  damageTag: GoblinAttack
-  coinsGranted: 0
-  flashMat: {fileID: 2100000, guid: fe4356f49e9a42648b60ce86f1e3da8a, type: 2}
-  hitNumber: {fileID: 4082860394459818591, guid: 7568d467dcc51af4caaf654efebcaf66, type: 3}
-  death: {fileID: 0}
-  deathParticle: {fileID: 0}
 --- !u!60 &1033317505
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -5741,7 +5719,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 181794442}
   health: 20
-  maxHealth: 0
+  maxHealth: 40
   damageTag: GoblinAttack
   evictionMenu: {fileID: 1250301212}
 --- !u!1 &1078153529

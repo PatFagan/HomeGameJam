@@ -17,7 +17,7 @@ public class HomeHealthManager : MonoBehaviour
     void Start()
     {
         // set maxHealth to default health amount
-        //maxHealth = health*2f;
+        maxHealth = health*2f;
     }
 
     void Update()
