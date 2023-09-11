@@ -229,8 +229,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 3065089912777572101}
-  staticHealth: 5
-  health: 5
+  staticHealth: 7
+  health: 7
   damageTag: GoblinAttack
   coinsGranted: 0
   flashMat: {fileID: 2100000, guid: fe4356f49e9a42648b60ce86f1e3da8a, type: 2}

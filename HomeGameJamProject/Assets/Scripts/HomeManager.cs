@@ -94,10 +94,9 @@ public class HomeManager : MonoBehaviour
 
         if (attackUpgraded)
         {
-            gnomeSpawn.GetComponent<GnomeAttacks>().attackScalar *= 2f;
+            if (gnomeSpawn.tag != "Poison")
+                gnomeSpawn.GetComponent<GnomeAttacks>().timeBetweenAttacks = .5f;
         }
-
-        print(gnomeSpawn.GetComponent<GnomeAttacks>().attackScalar);
         
         Instantiate(gnomeSpawn, gnomeSpawn.transform.position, Quaternion.identity);
     }
