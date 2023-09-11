@@ -7,7 +7,7 @@ using TMPro;
 public class Spawner : MonoBehaviour
 {
     public GameObject[] spawnedObjects;
-    float spawnDelay = 3;
+    float spawnDelay = 5;
 
     int tick = 0;
     int maxEnemySpawn = 1;
@@ -22,24 +22,21 @@ public class Spawner : MonoBehaviour
         switch(tick) 
         {
         case 5:
-            maxEnemySpawn = 2;
+            maxEnemySpawn = 5;
             break;
         case 10:
             maxEnemySpawn = 3;
             break;
         case 15:
-            spawnDelay = 2.5f;
+            spawnDelay = 4.5f;
             break;
         case 20:
             maxEnemySpawn = 5;
             break;
         case 25:
-            spawnDelay = 2;
+            spawnDelay = 3.5f;
             break;
         case 30:
-            spawnDelay = 1.5f;
-            break;
-        case 35:
             maxEnemySpawn = spawnedObjects.Length;
             break;
         default:

@@ -55,7 +55,6 @@ public class GnomeAttacks : MonoBehaviour
         if (attacking || constantlyMoveAndAttack)
         {
             GameObject newAttack = meleeAttack;
-            newAttack.GetComponent<Damage>().damage *= attackScalar;
 
             Instantiate(newAttack, transform.position, Quaternion.identity); 
         }

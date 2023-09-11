@@ -16,6 +16,7 @@ public class GoblinAttacks : MonoBehaviour
     public float timeBetweenAttacks;
 
     bool attacking = false;
+    bool moving = true;
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +29,7 @@ public class GoblinAttacks : MonoBehaviour
     {
         AttackCheck();
 
-        if (!attacking)
+        if (moving && !attacking)
         {
             Movement();
         }
@@ -59,12 +60,18 @@ public class GoblinAttacks : MonoBehaviour
         // buffer between units
         bool buffer = Physics2D.Raycast(rayCastStart, Vector3.left, 1f);
         
+        if (buffer)
+        {
+            moving = false;
+        }
+
         if (nearEnemy || buffer)
         {
             attacking = true;
         }
         else if (!nearEnemy)
         {
+            moving = true;
             attacking = false;
         }
     }
