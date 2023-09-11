@@ -56,7 +56,6 @@ MonoBehaviour:
   timeBetweenAttacks: 1
   attackScalar: 1
   constantlyMoveAndAttack: 1
-  anim: {fileID: 0}
 --- !u!114 &1634289885226372002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215,7 +214,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 7
   m_TargetDisplay: 0
 --- !u!114 &3578375286095751355
 MonoBehaviour:
