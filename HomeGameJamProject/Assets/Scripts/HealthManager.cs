@@ -21,6 +21,8 @@ public class HealthManager : MonoBehaviour
 
     public AudioSource death;
 
+    int damageOverTimeTicks = 10;
+
     public ParticleSystem deathParticle;
     void Start()
     {
@@ -39,32 +41,52 @@ public class HealthManager : MonoBehaviour
     {
         if (collider.gameObject.tag == damageTag)
         {
-            // flash
             float damage = collider.gameObject.GetComponent<Damage>().damage;
-            health -= damage;
-            StartCoroutine(Flash());
+            TakeDamage(damage);
             
-            // hit number
-            GameObject newHit = hitNumber;
-            newHit.transform.GetChild(0).GetComponent<TMP_Text>().text = "-" + damage.ToString();
-            Instantiate(hitNumber, transform.position, Quaternion.identity);
-
             // destroy attack projectile
             Destroy(collider.gameObject);
+        }
+        else if (collider.gameObject.tag == "Poison" && gameObject.tag == "Goblin")
+        {
+            damageOverTimeTicks = 10;
+            StartCoroutine(DoT());
+        }
+    }
 
-            if (health <= 0)
+    IEnumerator DoT()
+    {
+        TakeDamage(.5f);
+        yield return new WaitForSeconds(.25f);
+        damageOverTimeTicks--;
+
+        if (damageOverTimeTicks > 0)
+            StartCoroutine(DoT());
+    }
+
+    void TakeDamage(float attackerDamage)
+    {
+        // flash
+        health -= attackerDamage;
+        StartCoroutine(Flash());
+        
+        // hit number
+        GameObject newHit = hitNumber;
+        newHit.transform.GetChild(0).GetComponent<TMP_Text>().text = "-" + attackerDamage.ToString();
+        Instantiate(hitNumber, transform.position, Quaternion.identity);
+
+        if (health <= 0)
+        {
+            if (!dead)
             {
-                if (!dead)
-                {
-                    print("gain" + coinsGranted + "coins");
-                    GameObject.Find("HomeBase").GetComponent<HomeManager>().coins += coinsGranted;
-                    // add some death effect here
-                    Destroy(gameObject);
-                }
-                dead = true;
-                death.Play();
-                deathParticle.Play();
+                print("gain" + coinsGranted + "coins");
+                GameObject.Find("HomeBase").GetComponent<HomeManager>().coins += coinsGranted;
+                // add some death effect here
+                Destroy(gameObject);
             }
+            dead = true;
+            death.Play();
+            deathParticle.Play();
         }
     }
 

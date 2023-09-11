@@ -214,6 +214,7 @@ MonoBehaviour:
   width: 0.75
   meleeAttack: {fileID: 3980320842927003469, guid: 4355f672c10f0f74baea879bbf08a3e8, type: 3}
   attackDistance: 3
+  timeBetweenAttacks: 1
   constantlyMoveAndAttack: 0
 --- !u!114 &3557466675513941196
 MonoBehaviour:
@@ -233,6 +234,8 @@ MonoBehaviour:
   coinsGranted: 0
   flashMat: {fileID: 0}
   hitNumber: {fileID: 0}
+  death: {fileID: 0}
+  deathParticle: {fileID: 0}
 --- !u!212 &8410379486334736302
 SpriteRenderer:
   m_ObjectHideFlags: 0

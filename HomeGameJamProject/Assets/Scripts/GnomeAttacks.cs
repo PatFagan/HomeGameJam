@@ -14,6 +14,7 @@ public class GnomeAttacks : MonoBehaviour
     // attack variables
     public GameObject meleeAttack;
     public float attackDistance;
+    public float timeBetweenAttacks;
 
     bool attacking = false;
     bool moving = true;
@@ -55,7 +56,7 @@ public class GnomeAttacks : MonoBehaviour
             Instantiate(meleeAttack, transform.position, Quaternion.identity); 
         }
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(timeBetweenAttacks);
         StartCoroutine(Attacking());
     }
 

@@ -316,6 +316,7 @@ MonoBehaviour:
   width: 0.75
   meleeAttack: {fileID: 3980320842927003469, guid: 6e03e4ed62726504bb442095825120d0, type: 3}
   attackDistance: 3
+  timeBetweenAttacks: 1
 --- !u!114 &7700562477555750946
 MonoBehaviour:
   m_ObjectHideFlags: 0

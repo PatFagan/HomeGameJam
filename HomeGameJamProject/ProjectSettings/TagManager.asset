@@ -8,6 +8,7 @@ TagManager:
   - GoblinAttack
   - Goblin
   - Gnome
+  - Poison
   layers:
   - Default
   - TransparentFX

@@ -7,7 +7,7 @@ public class HomeHealthManager : MonoBehaviour
 {
     public Image healthBar;
     public float health;
-    float maxHealth;
+    public float maxHealth;
     public string damageTag;
 
     bool dead = false;

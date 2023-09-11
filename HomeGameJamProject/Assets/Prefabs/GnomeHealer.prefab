@@ -138,6 +138,7 @@ MonoBehaviour:
   width: 0.75
   meleeAttack: {fileID: 3980320842927003469, guid: eb7c27d8b319e99458b148fe90df85cc, type: 3}
   attackDistance: 0
+  timeBetweenAttacks: 1
   constantlyMoveAndAttack: 1
 --- !u!114 &1634289885226372002
 MonoBehaviour:

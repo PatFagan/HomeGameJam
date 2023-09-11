@@ -68,6 +68,28 @@ public class HomeManager : MonoBehaviour
         }
     }
 
+    public void SpawnMage()
+    {
+        int cost = 7;
+        if (coins >= cost && spawnCoolingDown == false)
+        {
+            coins -= cost;
+            Instantiate(gnomes[3], gnomeSpawn.position, Quaternion.identity);
+            StartCoroutine(Cooldown());
+        }
+    }
+
+    public void UpgradeHutHealth()
+    {
+        int cost = 10;
+        if (coins >= cost)
+        {
+            coins -= cost;
+            gameObject.GetComponent<HomeHealthManager>().maxHealth += 10f;
+            gameObject.GetComponent<HomeHealthManager>().health += 15f;
+        }
+    }
+
     public void Retry()
     {
         SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);

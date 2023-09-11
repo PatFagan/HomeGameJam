@@ -101,8 +101,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8410379486164588049}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.6, z: 0}
-  m_LocalScale: {x: 1.7, y: 1.5, z: 1}
+  m_LocalPosition: {x: 0, y: 0.92, z: 0}
+  m_LocalScale: {x: 1.25, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8410379486334736301}
@@ -173,9 +173,9 @@ GameObject:
   - component: {fileID: 3557466675513941196}
   - component: {fileID: 8410379486334736302}
   - component: {fileID: 8410379486334736300}
-  - component: {fileID: -6303990738750026328}
+  - component: {fileID: 8655430935646892838}
   m_Layer: 0
-  m_Name: GnomeGrunt
+  m_Name: GnomeMage
   m_TagString: Gnome
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -210,11 +210,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8029c2b21b2a7d4fae3a8094779b803, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.03
+  moveSpeed: 0.01
   width: 0.75
-  meleeAttack: {fileID: 3980320842927003469, guid: 4ebed889fc9dc4e48bf85aa05d6952ec, type: 3}
-  attackDistance: 0.0005
-  timeBetweenAttacks: 1
+  meleeAttack: {fileID: 3980320842927003469, guid: 466bb9c0bf4d3204aa354a875eddd5fd, type: 3}
+  attackDistance: 7
+  timeBetweenAttacks: 4
   constantlyMoveAndAttack: 0
 --- !u!114 &3557466675513941196
 MonoBehaviour:
@@ -314,7 +314,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 2}
   m_EdgeRadius: 0
---- !u!61 &-6303990738750026328
+--- !u!61 &8655430935646892838
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -324,7 +324,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
