@@ -18,6 +18,10 @@ public class HomeManager : MonoBehaviour
 
     bool spawnCoolingDown = false;
 
+    // upgrades
+    bool healthUpgraded = false;
+    bool attackUpgraded = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,7 +45,7 @@ public class HomeManager : MonoBehaviour
         if (coins >= cost && spawnCoolingDown == false)
         {
             coins -= cost;
-            Instantiate(gnomes[0], gnomeSpawn.position, Quaternion.identity);
+            SpawnGnome(0);
             StartCoroutine(Cooldown());
         }
     }
@@ -52,7 +56,7 @@ public class HomeManager : MonoBehaviour
         if (coins >= cost && spawnCoolingDown == false)
         {
             coins -= cost;
-            Instantiate(gnomes[1], gnomeSpawn.position, Quaternion.identity);
+            SpawnGnome(1);
             StartCoroutine(Cooldown());
         }
     }
@@ -63,20 +67,39 @@ public class HomeManager : MonoBehaviour
         if (coins >= cost && spawnCoolingDown == false)
         {
             coins -= cost;
-            Instantiate(gnomes[2], gnomeSpawn.position, Quaternion.identity);
+            SpawnGnome(2);
             StartCoroutine(Cooldown());
         }
     }
 
     public void SpawnMage()
     {
-        int cost = 7;
+        int cost = 100;
         if (coins >= cost && spawnCoolingDown == false)
         {
             coins -= cost;
-            Instantiate(gnomes[3], gnomeSpawn.position, Quaternion.identity);
+            SpawnGnome(3);
             StartCoroutine(Cooldown());
         }
+    }
+
+    void SpawnGnome(int index)
+    {
+        GameObject gnomeSpawn = gnomes[index];
+
+        if (healthUpgraded)
+        {
+            gnomeSpawn.GetComponent<HealthManager>().health *= 2f;
+        }
+
+        if (attackUpgraded)
+        {
+            gnomeSpawn.GetComponent<GnomeAttacks>().attackScalar *= 2f;
+        }
+
+        print(gnomeSpawn.GetComponent<GnomeAttacks>().attackScalar);
+        
+        Instantiate(gnomeSpawn, gnomeSpawn.transform.position, Quaternion.identity);
     }
 
     public void UpgradeHutHealth()
@@ -87,6 +110,36 @@ public class HomeManager : MonoBehaviour
             coins -= cost;
             gameObject.GetComponent<HomeHealthManager>().maxHealth += 10f;
             gameObject.GetComponent<HomeHealthManager>().health += 15f;
+        }
+    }
+
+    public void UpgradeGnomeHealth()
+    {
+        int cost = 15;
+        if (coins >= cost)
+        {
+            coins -= cost;
+            healthUpgraded = true;
+        }
+    }
+
+    public void UpgradeGnomeAttack()
+    {
+        int cost = 20;
+        if (coins >= cost)
+        {
+            coins -= cost;
+            attackUpgraded = true;
+        }
+    }
+
+    public void UpgradeGoblinValue()
+    {
+        int cost = 30;
+        if (coins >= cost)
+        {
+            coins -= cost;
+            //healthUpgraded = true;
         }
     }
 

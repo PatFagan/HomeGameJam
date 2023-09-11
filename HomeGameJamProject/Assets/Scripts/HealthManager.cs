@@ -7,6 +7,7 @@ using TMPro;
 public class HealthManager : MonoBehaviour
 {
     public Image healthBar;
+    public float staticHealth;
     public float health;
     float maxHealth;
     public string damageTag;
@@ -27,6 +28,7 @@ public class HealthManager : MonoBehaviour
     void Start()
     {
         // set maxHealth to default health amount
+        health = staticHealth;
         maxHealth = health;
         defaultMat = gameObject.GetComponent<SpriteRenderer>().material;
     }
@@ -49,7 +51,7 @@ public class HealthManager : MonoBehaviour
         }
         else if (collider.gameObject.tag == "Poison" && gameObject.tag == "Goblin")
         {
-            damageOverTimeTicks = 10;
+            damageOverTimeTicks = 15;
             StartCoroutine(DoT());
         }
     }

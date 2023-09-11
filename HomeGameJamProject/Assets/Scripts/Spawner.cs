@@ -21,6 +21,9 @@ public class Spawner : MonoBehaviour
     {
         switch(tick) 
         {
+        case 5:
+            maxEnemySpawn = 2;
+            break;
         case 10:
             maxEnemySpawn = 3;
             break;

@@ -15,6 +15,7 @@ public class GnomeAttacks : MonoBehaviour
     public GameObject meleeAttack;
     public float attackDistance;
     public float timeBetweenAttacks;
+    public float attackScalar = 1f;
 
     bool attacking = false;
     bool moving = true;
@@ -53,7 +54,10 @@ public class GnomeAttacks : MonoBehaviour
     {
         if (attacking || constantlyMoveAndAttack)
         {
-            Instantiate(meleeAttack, transform.position, Quaternion.identity); 
+            GameObject newAttack = meleeAttack;
+            newAttack.GetComponent<Damage>().damage *= attackScalar;
+
+            Instantiate(newAttack, transform.position, Quaternion.identity); 
         }
 
         yield return new WaitForSeconds(timeBetweenAttacks);

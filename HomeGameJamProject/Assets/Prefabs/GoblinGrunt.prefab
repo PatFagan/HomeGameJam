@@ -329,6 +329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 3958564882593195268}
+  staticHealth: 5
   health: 5
   damageTag: GnomeAttack
   coinsGranted: 3

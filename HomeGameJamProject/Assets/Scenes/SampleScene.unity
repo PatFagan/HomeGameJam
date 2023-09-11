@@ -1554,7 +1554,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Mage - 7
+  m_text: Fart Wizard - 100
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: edc3ecb0951b52542b17062a44f5a17d, type: 2}
   m_sharedMaterial: {fileID: 5291820064215647934, guid: edc3ecb0951b52542b17062a44f5a17d, type: 2}
@@ -1581,8 +1581,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 19.3
+  m_fontSizeBase: 19.3
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 0
@@ -1655,7 +1655,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 324022738}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.3, y: -3.85, z: -0.13750683}
+  m_LocalPosition: {x: -8.06, y: -3.85, z: -0.13750683}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2319,7 +2319,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 5
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.003921569, g: 0.0627451, b: 0.011764707, a: 1}
   m_FlipX: 0
@@ -3435,7 +3435,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Gnome Attack - '
+  m_text: Gnome Attack - 20
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: edc3ecb0951b52542b17062a44f5a17d, type: 2}
   m_sharedMaterial: {fileID: 5291820064215647934, guid: edc3ecb0951b52542b17062a44f5a17d, type: 2}
@@ -3549,7 +3549,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 15}
+  m_AnchoredPosition: {x: 0, y: 2.7999344}
   m_SizeDelta: {x: 200, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &632774822
@@ -3595,7 +3595,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 632774823}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1033317503}
+        m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
+        m_MethodName: UpgradeGnomeHealth
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &632774823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3692,7 +3704,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Gnome Health - '
+  m_text: Gnome Health - 15
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: edc3ecb0951b52542b17062a44f5a17d, type: 2}
   m_sharedMaterial: {fileID: 5291820064215647934, guid: edc3ecb0951b52542b17062a44f5a17d, type: 2}
@@ -5197,7 +5209,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1008204651
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5424,6 +5436,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 181794442}
+  staticHealth: 0
   health: 20
   damageTag: GoblinAttack
   coinsGranted: 0
@@ -5516,7 +5529,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -27.2}
+  m_AnchoredPosition: {x: 0, y: -39.4}
   m_SizeDelta: {x: 200, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1078153531
@@ -5562,7 +5575,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1078153532}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1033317503}
+        m_TargetAssemblyTypeName: HomeManager, Assembly-CSharp
+        m_MethodName: UpgradeGnomeAttack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1078153532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6413,8 +6438,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 220.29597, y: 19.302017}
-  m_SizeDelta: {x: 218.752, y: 215.61}
+  m_AnchoredPosition: {x: 220.29597, y: 53.369404}
+  m_SizeDelta: {x: 218.752, y: 147.4753}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1193020248
 MonoBehaviour:
@@ -6680,7 +6705,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Goblin Value - '
+  m_text: Goblin Value - 30
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: edc3ecb0951b52542b17062a44f5a17d, type: 2}
   m_sharedMaterial: {fileID: 5291820064215647934, guid: edc3ecb0951b52542b17062a44f5a17d, type: 2}
@@ -8670,7 +8695,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 58.5}
+  m_AnchoredPosition: {x: 0, y: 46.299934}
   m_SizeDelta: {x: 200, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1821060281
