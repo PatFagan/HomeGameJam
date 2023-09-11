@@ -74,7 +74,7 @@ public class HomeManager : MonoBehaviour
 
     public void SpawnMage()
     {
-        int cost = 100;
+        int cost = 1;
         if (coins >= cost && spawnCoolingDown == false)
         {
             coins -= cost;

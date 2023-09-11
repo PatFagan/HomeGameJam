@@ -131,7 +131,7 @@ MonoBehaviour:
   attackDistance: 7
   timeBetweenAttacks: 4
   attackScalar: 1
-  constantlyMoveAndAttack: 0
+  constantlyMoveAndAttack: 1
 --- !u!114 &3557466675513941196
 MonoBehaviour:
   m_ObjectHideFlags: 0
