@@ -206,7 +206,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8594667598422747731}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.41, y: -3.96, z: 0}
+  m_LocalPosition: {x: 6.41, y: -7, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -247,6 +247,7 @@ MonoBehaviour:
   healthBar: {fileID: 3958564882593195268}
   staticHealth: 5
   health: 5
+  maxHealth: 0
   damageTag: GnomeAttack
   coinsGranted: 3
   flashMat: {fileID: 2100000, guid: fe4356f49e9a42648b60ce86f1e3da8a, type: 2}
@@ -329,7 +330,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 1, y: 3.34}
   m_EdgeRadius: 0
 --- !u!82 &3994323228936162243
 AudioSource:
@@ -456,7 +457,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3420155681492483579, guid: 0f5aae6796afaf840b5de4adb31ab1f3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.9
+      value: -2.57
       objectReference: {fileID: 0}
     - target: {fileID: 3420155681492483579, guid: 0f5aae6796afaf840b5de4adb31ab1f3, type: 3}
       propertyPath: m_LocalPosition.z

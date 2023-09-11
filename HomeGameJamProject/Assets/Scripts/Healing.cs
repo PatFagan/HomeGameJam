@@ -38,7 +38,10 @@ public class Healing : MonoBehaviour
         if (healingNow)
         {
             float healthHealed = .5f;
-            gnomeHealed.GetComponent<HealthManager>().health += healthHealed;
+
+            if (gnomeHealed.GetComponent<HealthManager>().health <= gnomeHealed.GetComponent<HealthManager>().maxHealth)
+                gnomeHealed.GetComponent<HealthManager>().health += healthHealed;
+                
             // hit number
             GameObject newHit = hitNumber;
             newHit.transform.GetChild(0).GetComponent<TMP_Text>().text = "+" + healthHealed.ToString();

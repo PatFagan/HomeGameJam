@@ -15,7 +15,6 @@ public class GnomeAttacks : MonoBehaviour
     public GameObject meleeAttack;
     public float attackDistance;
     public float timeBetweenAttacks;
-    public float attackScalar = 1f;
 
     bool attacking = false;
     bool moving = true;
@@ -72,7 +71,7 @@ public class GnomeAttacks : MonoBehaviour
         // buffer between units
         bool buffer = Physics2D.Raycast(rayCastStart, Vector3.right, 1f);
 
-        bool noEnemy = Physics2D.Raycast(rayCastStart, Vector3.right, 200f, layerMask);
+        bool noEnemy = Physics2D.Raycast(rayCastStart, Vector3.right, 500f, layerMask);
         
         if (!noEnemy)
         {

@@ -9,7 +9,7 @@ public class HealthManager : MonoBehaviour
     public Image healthBar;
     public float staticHealth;
     public float health;
-    float maxHealth;
+    public float maxHealth;
     public string damageTag;
 
     public int coinsGranted;
@@ -51,6 +51,7 @@ public class HealthManager : MonoBehaviour
         }
         else if (collider.gameObject.tag == "Poison" && gameObject.tag == "Goblin")
         {
+            print("fart");
             damageOverTimeTicks = 15;
             StartCoroutine(DoT());
         }
