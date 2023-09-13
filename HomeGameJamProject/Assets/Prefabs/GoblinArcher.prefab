@@ -231,6 +231,7 @@ MonoBehaviour:
   meleeAttack: {fileID: 3980320842927003469, guid: dfdffcce2901b2543ae3664860f67811, type: 3}
   attackDistance: 0.003
   timeBetweenAttacks: 1
+  anim: {fileID: 1054399173039693835}
 --- !u!114 &7700562477555750946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -396,6 +397,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2eb6e83016407d342b5cc4e80fda1bb0, type: 3}
+--- !u!95 &1054399173039693835 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4889479986575692998, guid: 2eb6e83016407d342b5cc4e80fda1bb0, type: 3}
+  m_PrefabInstance: {fileID: 5583080705711600845}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7065517979859044662 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3420155681492483579, guid: 2eb6e83016407d342b5cc4e80fda1bb0, type: 3}

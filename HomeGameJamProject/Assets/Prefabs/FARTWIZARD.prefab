@@ -259,6 +259,7 @@ MonoBehaviour:
   attackDistance: 5
   timeBetweenAttacks: 4
   constantlyMoveAndAttack: 1
+  anim: {fileID: 7106652275330794394}
 --- !u!114 &3557466675513941196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -468,5 +469,10 @@ PrefabInstance:
 --- !u!4 &1332469601626806793 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6222247878576148232, guid: 14bcbc17c628bc54c8dd00c394781e99, type: 3}
+  m_PrefabInstance: {fileID: 4910119245956601089}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &7106652275330794394 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2791063980403922587, guid: 14bcbc17c628bc54c8dd00c394781e99, type: 3}
   m_PrefabInstance: {fileID: 4910119245956601089}
   m_PrefabAsset: {fileID: 0}

@@ -18,6 +18,8 @@ public class GoblinAttacks : MonoBehaviour
     bool attacking = false;
     bool moving = true;
 
+    public Animator anim;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,13 +40,16 @@ public class GoblinAttacks : MonoBehaviour
     void Movement()
     {
         transform.position += new Vector3(moveSpeed, 0f, 0f);
+        anim.Play("goblin walk");
     }
 
     IEnumerator Attacking()
     {
         if (attacking)
         {
-            Instantiate(meleeAttack, transform.position, Quaternion.identity); 
+            Instantiate(meleeAttack, transform.position, Quaternion.identity);
+
+            anim.Play("goblinAttack");
         }
 
         yield return new WaitForSeconds(timeBetweenAttacks);

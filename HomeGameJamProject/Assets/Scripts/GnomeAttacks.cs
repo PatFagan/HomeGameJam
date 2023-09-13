@@ -20,6 +20,8 @@ public class GnomeAttacks : MonoBehaviour
     bool moving = true;
     public bool constantlyMoveAndAttack;
 
+    public Animator anim;
+
     // Start is called before the first frame update
     void Start()
     {   
@@ -55,7 +57,8 @@ public class GnomeAttacks : MonoBehaviour
         {
             GameObject newAttack = meleeAttack;
 
-            Instantiate(newAttack, transform.position, Quaternion.identity); 
+            Instantiate(newAttack, transform.position, Quaternion.identity);
+            anim.Play("attack");
         }
 
         yield return new WaitForSeconds(timeBetweenAttacks);
